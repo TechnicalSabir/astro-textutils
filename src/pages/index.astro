@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title="Textutils | Word counter - Powered by TechnicalSabir">
+	<div id="main" class="container-fluid p-0">
+        <div class="my-5 mx-3">
+            <div class="row">
+                <div class="col-xl-8">
+                    <div class="card bg-transparent">
+                        <div class="card-header my_card">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <p class="text-muted mb-1 mb-1 fs-14">WORDS</p>
+                                    <span id="words_idle" class="fw-bold fs-3">0</span>
+                                </div>
+                                <div class="col text-center">
+                                    <p class="text-muted mb-1 fs-14">CHARACTERS</p>
+                                    <span id="char_idle" class="fw-bold fs-3">0</span>
+                                </div>
+                                <div class="col text-center">
+                                    <p class="text-muted mb-1 fs-14">FACEBOOK</p>
+                                    <p><span id="facebook_idle" class="fw-bold fs-3">250</span>/250</p>
+                                </div>
+                                <div class="col text-center">
+                                    <p class="text-muted mb-1 fs-14">TWITTER</p>
+                                    <p><span id="twitter_idle" class="fw-bold fs-3">280</span>/280</p>
+                                </div>
+                                <div class="col text-center">
+                                    <p class="text-muted mb-1 fs-14">GOOGLE</p>
+                                    <p><span id="google_idle" class="fw-bold fs-3">300</span>/300</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <textarea id="text_editor" class="form-control bg-transparent appearance_elem" cols="30" rows="14" oninput="hadle_word_textbox(this.value)" placeholder="Type or paste your text content here to analyze."></textarea>
+                        </div>
+                        <div class="card-footer py-4">
+                            <div class="">
+                                <button class="btn btn-secondary bg-dradient btn-sm m-1" onclick="handle_uppercase()">Uppercase</button>
+                                <button class="btn btn-secondary bg-dradient btn-sm m-1" onclick="handle_lowercase()">Lowercase</button>
+                                <button class="btn btn-secondary bg-dradient btn-sm m-1" onclick="handle_copytext(this)">Copy text</button>
+                                <button class="btn btn-secondary bg-dradient btn-sm m-1" onclick="handle_download_txt_file()">Download</button>
+                                <button class="btn btn-secondary bg-dradient btn-sm m-1" onclick="rm_extra_spaces()">RM extra spaces</button>
+                                <button class="btn btn-danger bg-gradient btn-sm m-1" onclick="handle_clear_text()">Clear text</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="content appearance_elem">
+                        <h1 class="my-3" style="font-size: 2rem;">Text Utils - Word Counter</h1>
+                        <p class="paragraph">A word counter is a tool that is used to count the number of words in a given text or document. It is a useful tool for writers, students, researchers, and anyone who needs to keep track of the number of words in a piece of text. Word counters can be found as standalone tools online or as features in various word processing software like Microsoft Word, Google Docs, etc. They are usually very easy to use and can provide accurate word count results in just a few seconds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
